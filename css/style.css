@@ -1,0 +1,299 @@
+/* Start Variables  */
+:root {
+    --main-duration: .3s;
+}
+/* End Variables  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.form {
+    width: 450px;
+    height: calc(100vh - 100px);
+    margin: 5px auto;
+    background-color: #222;
+    border-radius: 20px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .form {
+        background-color: transparent;
+    }
+}
+.container {
+    margin: 50px 50px 0;
+    height: calc(100% - 10px);
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .container {
+        margin: 50px 10px 0;
+    }
+}
+.header {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 20%;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    height: 1px;
+    width: 80%;
+    background-color: black;
+}
+.header h1 {
+    padding: 10px 0 0 10px;
+}
+.header h1 i {
+    position: absolute;
+}
+.header h1 .animate-1 {
+    color: #3f51b5;
+    animation: animate-1 var(--main-duration) cubic-bezier(0, 0, 0, 1.27) forwards;
+}
+.header h1 .animate-2 {
+    animation: animate-2 var(--main-duration) cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+.header h1 .animate-3 {
+    animation: animate-3 var(--main-duration) cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: .6s;
+    opacity: 0;
+}
+.header h1 .animate-4 {
+    animation: animate-4 var(--main-duration) cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: .9s;
+    opacity: 0;
+}
+.header h1 .animate-5 {
+    animation: animate-5 var(--main-duration) cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+.header h1 .animate-6 {
+    animation: animate-6 var(--main-duration)s cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+.header h1 .animate-6 {
+    animation: animate-6 var(--main-duration) cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+}
+.header h1 .animate-7 {
+    animation: animate-7 var(--main-duration) cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: 2.1s;
+    opacity: 0;
+}
+.header .title {
+    padding: 40px 0 0 100px;
+    font-size: 35px;
+    color: #673ab7;
+    position: absolute;
+    top: -80px;
+    right: 40px;
+    animation: title 2s cubic-bezier(0, 0, 0, 1.27) forwards;
+    animation-delay: 3s;
+}
+@media (max-width: 767px) {
+    .header .title {
+        padding-top: 75px;
+        top: -110px;
+    }
+}
+.body .title h3 {
+    margin: 20px 35px 5px;
+    color: #f44336;
+    font-size: 22px;
+}
+.body .input {
+    display: flex;
+    justify-content: end;
+    margin: 15px 35px;
+}
+.body .input .field {
+    padding: 8px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #111;
+}
+.body .input .field::placeholder {
+    font-size: 18px;
+    color: #777;
+}
+.body .input .field:focus {
+    outline: none;
+}
+.body .input .btn {
+    background-color: #009688;
+    border: none;
+    border-radius: 6px;
+    margin: 0 5px;
+    padding: 0 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+.body .result {
+    margin: 20px 40px 5px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #03a9f4;
+    border-radius: 7px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@media (max-width: 767px) {
+    .body .result {
+        margin-top: 80px;
+    }
+}
+.body .result span {
+    width: 157px;
+    height: 50px;
+    background-color: #ffeb3b;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+@media (max-width: 767px) {
+    .body .result span {
+        width: 185px;
+    }
+}
+.body .result span i {
+    margin: auto;
+    width: fit-content;
+    display: block;
+}
+.footer {
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #4c62af;
+}
+@media (max-width: 767px) {
+    .footer {
+        margin-top: 50px;
+    }
+}
+.footer .notes {
+    text-shadow: -1px 2px 7px #00000036;
+}
+.footer .notes::before {
+    font-family: 'Font Awesome 5 Free';
+    content: var(--icon, "\f004");
+    padding: 5px 10px;
+    color: var(--color,#e91e63);
+    font-size: 20px;
+}
+.creator {
+    margin: 50px;
+    color: black;
+    font-size: 10px;
+}
+@media (max-width: 767px) {
+    .creator {
+        margin-top: 110px;
+    }
+}
+.creator span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #101844;
+}
+/* Start Animation  */
+@keyframes animate-1 {
+    0% {
+        right: -30px;
+    }
+    100% {
+        right: 300px;
+    }
+}
+@keyframes animate-2 {
+    0% {
+        right: -30px;
+        opacity: 1;
+    }
+    100% {
+        right: 285px;
+        opacity: 1;
+    }
+}
+@keyframes animate-3 {
+    0% {
+        right: -30px;
+        opacity: 1;
+    }
+    100% {
+        right: 270px;
+        opacity: 1;
+    }
+}
+@keyframes animate-4 {
+    0% {
+        right: -30px;
+        opacity: 1;
+    }
+    100% {
+        right: 255px;
+        opacity: 1;
+    }
+}
+@keyframes animate-5 {
+    0% {
+        right: -30px;
+        opacity: 1;
+    }
+    100% {
+        right: 240px;
+        opacity: 1;
+    }
+}
+@keyframes animate-6 {
+    0% {
+        right: -30px;
+        opacity: 1;
+    }
+    100% {
+        right: 225px;
+        opacity: 1;
+    }
+}
+@keyframes animate-7 {
+    0% {
+        right: -30px;
+        opacity: 1;
+    }
+    100% {
+        right: 210px;
+        opacity: 1;
+    }
+}
+@keyframes title {
+    to {
+        top: 0px;
+    }
+}
+/* End Animation  */
